@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmrl xmlns:dotgo="http://dotgo.com/cmrl/1.0">
+	<match pattern="*">
+		<message>
+			<content>Hello world!</content>
+		</message>
+	</match>
+</cmrl>
