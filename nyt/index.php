@@ -1,53 +1,23 @@
-<html>
-	<head>
-		<title>NYT</title>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-		
-		<script>
- 			var titles = new Array();
-			var text = new Array();
-			var apiKey = "52697f63c9ade478ec6f2c7d71811aa6:17:61363877";
-			var url = 
-			"http://api.nytimes.com/svc/search/v1/article?format=json&query=occupy%2Bwall%2Bstreet&rank=newest&api-key="+apiKey;
-			//console.log(url);
-			
-			$.ajax({	
-				url:"http://pipes.yahoo.com/pipes/pipe.run", 
-				data:{
-					u: url,
-					_id: "332d9216d8910ba39e6c2577fd321a6a",
-					_render: "json"
-					},
-				jsonp: "_callback",
-				dataType: "jsonp",
-				
-			//brad.stenger@nytimes.com
-			success: function(data){
-					
-			
-				var content = "";
-				//console.log(data);
-				//console.log(data.value.items[0].results);
-				var items = data.value.items[0];
-				for( var i = 0; i<items.results.length; i++){
-					titles.push(items.results[i].title);
-		 			text.push(items.results[i].body);
-					//document.write("<h4>"+items.results[i].title+"</h4>");
-					//document.write("<p>"+items.results[i].body+"</p>");
-					content = items.results[i].title + " - " + items.results[i].body;
-				
-				}
-				
-				document.write('<section id="stuff"><message><content>' + content + '</content></message></section>');
-			}	
-			});
-			
-			
-		</script>
-		
-		
-	</head>
+<?php
+
+	$times = new NYTimes();
+	$testForLatestNYT = $times->findNYTimes('occupy+wall+street');
+
+	echo('<message><content>'.$testForLatestNYT->results[0]->title ." - ". $testForLatestNYT->results[0]->body.'</content></message>');
+	//$title = $testForLatestNYT->results->;
 	
-	<body>
-	</body>
-</html>
+	//data.value.items[0];
+
+	class NYTimes {
+	
+	    public function findNYTimes($query) {
+	        $data = file_get_contents('http://api.nytimes.com/svc/search/v1/article?format=json&query='.urlencode($query).'&rank=newest&api-key=52697f63c9ade478ec6f2c7d71811aa6:17:61363877');
+	        $nyts = json_decode($data);
+
+	        return $nyts;
+	    }
+
+	}
+	
+	
+?>

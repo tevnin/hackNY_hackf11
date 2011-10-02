@@ -6,10 +6,10 @@
 	// 	$text = strip_tags(trim($text));
 	// 	echo($text);
 
-	var_dump($testForLatestNYT);
+	echo('<message><content>'.$testForLatestNYT->results[0]->title ." - ". $testForLatestNYT->results[0]->body.'</content></message>');
 	//$title = $testForLatestNYT->results->;
 	
-	data.value.items[0];
+	//data.value.items[0];
 
 	class NYTimes {
 	
@@ -21,9 +21,6 @@
 	    }
 
 	}
-	
-	// $sys_argument = $_REQUEST['sys_argument'];
-	// 	 echo "<message><content>'$sys_argument'!</content></message>";
 	
 	
 ?>
