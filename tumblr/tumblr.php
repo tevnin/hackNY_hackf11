@@ -1,157 +1,108 @@
 <?php
 
-var outputString = new Array;
-
+$outputString = array();
 
 $occupy = new TumblrPost();
 
 $pullTumblr = $occupy->parse();
 
-var_dump($pullTumblr);
+
+//var_dump($pullTumblr);
 
 
-/*	
-	
-	function percent (percentData) {
+	for ($i=0;$i<10;$i++) {
 			 
-		var postNumber = 5;
+		$postNumber = $i;
 		
-		var body = percentData.response.posts[postNumber].body;
+		$body = $pullTumblr->response->posts[$postNumber]->body;
 
-		
-		//stripping HTML from: http://robertnyman.com/roblab/javascript-remove-tags.htm	 
-		
-		body = body.replace(/&(lt|gt);/g, function (strMatch, p1){
+		/*
+		$body = $body preg_replace(/&(lt|gt);/g, function (strMatch, p1){
 			return (p1 == "lt")? "<" : ">";
 		});
 		var bodyStrip = body.replace(/<\/?[^>]+(>|$)/g, "");
+		
+		*/
+		
+		$bodyStrip = strip_tags($body);
+		
+		//echo($bodyStrip);
+		
+		$bodyStrip = preg_replace("/&.{0,}?;/",'',$bodyStrip);
+		
+		$bodyStrip = urlencode($bodyStrip);
+		
+	    $shortUrl = "http://140it.com/api/shrink?text=".$bodyStrip;
+
+
+		//echo $shortUrl;
+		$output = $occupy->shorten($shortUrl);
+		
+		//echo($output->new);
+		
+		//$rest = substr("abcdef", 0, -1);
+		
+		$text[$i] = substr($output->new, 0, 435);
 	
-	
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
-		bodyStrip = bodyStrip.replace(/&#?[a-z0-9]{2,8};/i,"");
 		
-		
-		//console.log(bodyStrip); 
-
-
-		//adding %20 in spaces for HTML query
-		bodyStrip=bodyStrip.replace(/ /g,"%20");
-		
-		//console.log(bodyStrip);
-		
-		
-		var shortUrl = "http://140it.com/api/shrink?text="+bodyStrip;
-
-
-		$.getJSON(shortUrl+"&callback=?", function(shortData) {   //jsonp request
-		
-		
-			var outputString = splitter(shortData['new'], 148);
-			
-			
-			console.log(outputString.length);
-			
-			//document.write(outputString[1]);
-
-			
-			
-			if (outputString.length == 1){	
-				document.write(outputString[0]);
-			}
-			
-			
-			if (outputString.length == 2){	
-				document.write(outputString[0]+"(txt4more..)");
-				document.write(outputString[1]);
-			}
-			
-			if (outputString.length == 3){	
-				document.write(outputString[0]+"(txt4more..)");
-				document.write(outputString[1]+"(txt4more..)");
-				document.write(outputString[2]);
-			}
-			
-			if (outputString.length == 4){	
-				document.write(outputString[0]+"(txt4more..)");
-				document.write(outputString[1]+"(txt4more..)");
-				document.write(outputString[2]+"(txt4more..)");
-				document.write(outputString[3]);
-			}
-			
-			
-			if (outputString.length == 5){	
-				document.write(outputString[0]+"(txt4more..)");
-				document.write(outputString[1]+"(txt4more..)");
-				document.write(outputString[2]+"(txt4more..)");
-				document.write(outputString[3]+"(txt4more..)");
-				document.write(outputString[4]);
-			}
-			
-			if (outputString.length == 6){	
-				document.write(outputString[0]+"(txt4more..)");
-				document.write(outputString[1]+"(txt4more..)");
-				document.write(outputString[2]+"(txt4more..)");
-				document.write(outputString[3]+"(txt4more..)");
-				document.write(outputString[4]+"(txt4more..)");
-				document.write(outputString[5]);
-			}
-			
-
-		    	    
-		});	 
 	}
-			 
-			 
-	function splitter(str, l){
-	    var strs = [];
-	    while(str.length > l){
-	        var pos = str.substring(0, l).lastIndexOf(' ');
-	        pos = pos <= 0 ? l : pos;
-	        strs.push(str.substring(0, pos));
-	        var i = str.indexOf(' ', pos);
-	        if(i < pos || i > pos+l)
-	            i = pos;
-	        str = str.substring(pos);
-	    }
-	    strs.push(str);
-	    return strs;
-	    
-	}
-	
-*/
+		
+	var_dump($text);
 			 
 	class TumblrPost {
 	  function parse() {
 	
-	        $percentURL =  "http://api.tumblr.com/v2/blog/wearethe99percent.tumblr.com/posts/text?api_key=eTWiIM8BvyUNOkl7QZUUSei2WgcaMXwOBASDVeUSymGsBBuLfy";
-	  		$shortData;
-	  		$percentData;
-		  		
-	  		//$.ajax({url:percentURL+"&jsonp=percent", dataType:"jsonp"});
-	  		
-	  		$data = file_get_contents(percentURL);
-	  		
-	  		$tumblr = json_decode($data);
-	  		
-	  		return $tumblr;
+	    $percentURL =  "http://api.tumblr.com/v2/blog/wearethe99percent.tumblr.com/posts/text?api_key=eTWiIM8BvyUNOkl7QZUUSei2WgcaMXwOBASDVeUSymGsBBuLfy";
+
+		
+	  	// create curl resource 
+        $ch = curl_init(); 
+
+        // set url 
+        curl_setopt($ch, CURLOPT_URL, $percentURL); 
+
+        //return the transfer as a string 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+
+        // $output contains the output string 
+        $output = curl_exec($ch); 
+
+        // close curl resource to free up system resources 
+        curl_close($ch);      
+        
+        $tumblr = json_decode($output);
+        
+        return $tumblr;
 	
 	  }  
 	  
+	function shorten($shortUrl) {
+		
+	  	// create curl resource 
+        $ch = curl_init(); 
+
+        // set url 
+        curl_setopt($ch, CURLOPT_URL, $shortUrl); 
+
+        //return the transfer as a string 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+
+        // $output contains the output string 
+        $outputTumblr = curl_exec($ch); 
+
+        // close curl resource to free up system resources 
+        curl_close($ch);    
+        
+        $outputTumblr = json_decode($outputTumblr);  
+                
+        return $outputTumblr;
+       
+        
+    }
+
+
 	  
 	}
+	
 
 ?>
