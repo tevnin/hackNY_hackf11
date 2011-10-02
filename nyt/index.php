@@ -1,5 +1,11 @@
 <?php
 
+			if(isset($_REQUEST['sys_argument'])) {        
+               $sys_argument = $_REQUEST['sys_argument'];
+       } else {
+               $sys_argument = "occupy wall street";
+       }
+
 	$times = new NYTimes();
 	$testForLatestNYT = $times->findNYTimes('occupy+wall+street');
 	
@@ -7,7 +13,7 @@
 	
 	$searchQuery = preg_replace(' ', '+', $_REQUEST('sys_argument'));
 
-	echo('<message><content>'.$testForLatestNYT->results[0]->title ." - ". $testForLatestNYT->results[0]->body.'</content></message>');
+
 
 	class NYTimes {
 	
@@ -20,6 +26,8 @@
 	
 
 	}
+	
+		echo('<message><content>'.$testForLatestNYT->results[0]->title ." - ". $testForLatestNYT->results[0]->body.'</content></message>');
 	
 	
 ?>
