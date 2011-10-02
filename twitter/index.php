@@ -1,12 +1,19 @@
 <?php
 
-	$sys_argument = $_REQUEST['sys_argument'];
+	if(isset($_REQUEST['sys_argument'])) {	
+		$sys_argument = $_REQUEST['sys_argument'];
+	} else {
+		$sys_argument = "#occupywallstreet";
+	}	
 
 	$twitter = new Twitter();
-	$testForLatestTweet = $twitter->findTweets($sys_argument);
-	);
+	$testForLatestTweet = $twitter->findTweets($sys_argument, 'popular');
 	$text = $testForLatestTweet[0]->text;
 	$text = strip_tags(trim($text));
+	$testForMixedTweets = $twitter->findTweets($sys_argument, 'mixed');
+	for($i=0; $i<count($testForMixedTweets); $i++){
+		$textMixed[$i] = strip_tags(trim($testForMixedTweets[$i]->text));
+	}
 	// for($i=0; i<textExploded.length; i++){
 	// 	text .= textExploded[i];
 	// }
@@ -16,8 +23,8 @@
 
 	class Twitter {
 	
-	    public function findTweets($query, $formatLinks = TRUE) {
-	        $data = file_get_contents('http://search.twitter.com/search.json?rpp=30&result_type=popular&q=' . urlencode($query));
+	    public function findTweets($query, $popular, $formatLinks = TRUE) {
+	        $data = file_get_contents('http://search.twitter.com/search.json?rpp=10&result_type=' . $popular . '&q=' . urlencode($query));
 	        $tweets = json_decode($data);
 
 	        if ($formatLinks === TRUE) {
@@ -47,7 +54,18 @@
 	    }
 	}
 	
-	 echo "<message><content>" . $text . "</content></message>";
-
 	
-?>
+	$sessionvar1 = $_REQUEST['sessionvar1'];
+	
+	if(!isset($sessionvar1)){
+		echo "
+		<message>
+			<content>" . $text . " -Text 1 4more</content>
+		</message>";
+	 } else { 		
+		echo "
+		<message>
+			<content>" . $textMixed[0] . " -Text crazyface 4more</content>
+		</message>";
+ 	}
+		?>
