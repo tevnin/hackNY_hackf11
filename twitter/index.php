@@ -44,4 +44,8 @@
 	    }
 	}
 	
+	$sys_argument = $_REQUEST['sys_argument'];
+	 echo "<message><content>You texted in '$sys_argument'!</content></message>";
+
+	
 ?>

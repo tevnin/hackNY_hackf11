@@ -157,6 +157,7 @@ NYTimes
 	Archive back to 1981
 	Will increase scrobbling!!!
 	Newswire—'firehose' app
+	brad.stenger@nytimes.com
 	
 hyperpublic
 	Doug Canich?
@@ -230,4 +231,5 @@ APIs we're integrating:
 		
 DOTCOM: 368266
 DOTORG: 368674
+		
 		
