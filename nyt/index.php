@@ -4,9 +4,6 @@
 	$testForLatestNYT = $times->findNYTimes('occupy+wall+street');
 
 	echo('<message><content>'.$testForLatestNYT->results[0]->title ." - ". $testForLatestNYT->results[0]->body.'</content></message>');
-	//$title = $testForLatestNYT->results->;
-	
-	//data.value.items[0];
 
 	class NYTimes {
 	
