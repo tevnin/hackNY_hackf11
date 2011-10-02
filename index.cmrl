@@ -10,6 +10,11 @@
 	<match pattern="news">
 		<engine href="http://www.openqry.org/nyt/index.php" />
 	</match>
+	<match pattern="help">
+		<message>
+			<content>Text "openqry news topic" for news, "openqry twitter topic" for twitter, "openqry tumblr topic" for tumblr</content>
+		</message>
+	</match>
 	<match pattern="">
 		<message>
 	      <content>reply <engine href="http://www.openqry.org/nyt/index.php" /></anchor>for news, <anchor><engine href="http://www.openqry.org/twitter/index.php" /></anchor> for twitter, or <anchor><engine href="http://www.openqry.org/tumblr/tumblr.php" /></anchor> for tumblr to continue!</content>
