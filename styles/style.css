@@ -3,21 +3,34 @@ body{
 	background:url('../img/inflicted.png');
 	color:#ff114d;
 	font-family:'Rokkitt', Times, serif;
-	text-shadow: 1px 1px #ffaabf, -1px -1px #aa002b;
+/*	text-shadow: 1px 1px #ffaabf, -1px -1px #aa002b;*/
 	font-weight:bold;
 	margin:0;
 	padding:0;
+}
+#container{
+	background-color:rgba(255,255,255,.3);
+	width:960px;
+	margin:0 auto;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 header{
 	/*background-color:#f00;*/
 	display:block;
 	width:960px;
-	margin:50px auto;
+	margin:50px auto 20px auto;
 }
 article{
+	/*background-color:rgba(255,255,255,.4);*/
 	display:block;
-	width:960px;
+	width:860px;
 	margin:0 auto;
+	
+/*	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;*/
 }
 h1{
 	margin:0;
@@ -34,19 +47,32 @@ h3{
 	font-size:35px;
 	text-align:center;
 }
-ol{
-	width:768px;
-	margin:0 auto;
+span{
 	color:#fff;
 }
-ol li, ol li h2{
+ol{
+	width:760px;
+	padding:20px;
+	margin:0 auto;
+	color:#000;
+	text-shadow:none;
+}
+ol li{
 	font-size:60px;
+	margin:0 0 0 40px;
+	list-style:none;
+	text-align:center;
 }
 ol li h2{
-	display:inline;
+	/*display:inline;*/
+	margin:0;
+	font-size:60px;
+	color:#000;
+	text-shadow:none;
 }
 ol li p{
 	font-size:28px;
+	margin-top:-10px;
 	font-weight:normal;
-	display:inline;
+	text-shadow:none;
 }
