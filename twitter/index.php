@@ -1,6 +1,6 @@
 <?php
 
-	if(isset($_REQUEST['sys_argument'])) {	
+	if($_REQUEST['sys_argument']) {	
 		$sys_argument = $_REQUEST['sys_argument'];
 	} else {
 		$sys_argument = "#occupywallstreet";
