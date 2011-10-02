@@ -2,22 +2,23 @@
 <cmrl xmlns:dotgo="http://dotgo.com/cmrl/1.0">
 	
 	<match pattern="twitter">
-		<engine href="http://tamievnin.com/hackf11/twitter/index.php" />
+		<engine href="http://www.openqry.com/twitter/index.php" />
 	</match>
 	<match pattern="tumblr">
-		<engine href="http://tamievnin.com/hackf11/tumblr/tumblr.php" />
+		<engine href="http://www.openqry.com/tumblr/tumblr.php" />
 	</match>
 	<match pattern="news">
-		<engine href="http://tamievnin.com/hackf11/nytimes/index.php" />
+		<engine href="http://www.openqry.com/nyt/index.php" />
 	</match>
 	<match pattern="">
 	    <message>
-	      <content>openQry - text "news", "twitter", or "tumblr" + the topic you want to read more about.</content>
+		<message>
+	      <content>text <anchor><engine href="http://www.openqry.com/nyt/index.php" />"news"</anchor>, <anchor><engine href="http://www.openqry.com/twitter/index.php" />"twitter"</anchor>, or <anchor><engine href="http://www.openqry.com/tumblr/tumblr.php" />"tumblr"</anchor> to continue!</content>
 	    </message>
 	  </match>
 	<match pattern="*">
 		<message>
-			<content>openQry - text "news", "twitter", or "tumblr" + the topic you want to read more about.</content>
+			<content>text <anchor><engine href="http://www.openqry.com/nyt/index.php" />"news"</anchor>, <anchor><engine href="http://www.openqry.com/twitter/index.php" />"twitter"</anchor>, or <anchor><engine href="http://www.openqry.com/tumblr/tumblr.php" />"tumblr"</anchor> to continue!?</content>
 		</message>
 	</match>
 </cmrl>
