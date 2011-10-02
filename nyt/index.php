@@ -7,11 +7,9 @@
        }
 
 	$times = new NYTimes();
-	$testForLatestNYT = $times->findNYTimes('occupy+wall+street');
 	
+	//$searchQuery = preg_replace(' ', '+', $sys_argument);
 	$testForLatestNYT = $times->findNYTimes($sys_argument);
-	
-	$searchQuery = preg_replace(' ', '+', $sys_argument);
 
 
 

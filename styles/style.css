@@ -1,0 +1,76 @@
+body{
+	background-color:#eff0f2;
+	background:url('../img/light_honeycomb.png');
+	font-family:'Rokkitt', Times, serif;
+/*	text-shadow: 1px 1px #ffaabf, -1px -1px #aa002b;*/
+	font-weight:bold;
+	margin:0;
+	padding:0;
+}
+header{
+	/*background-color:#f00;*/
+	display:block;
+	width:960px;
+	margin:20px auto 20px auto;
+}
+article{
+	background-color:rgba(255,255,255,.4);
+	display:block;
+	width:960px;
+	height:300px;
+	margin:0 auto;
+	padding:20px 0;
+	text-align:center;
+	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+h1{
+	color:#ff114d;
+	margin:0;
+	padding:0;
+	font-size:170px;
+	text-shadow: 1px 1px #ffaabf, -1px -1px #aa002b;
+	text-align:center;
+}
+h2{
+	/*display:inline;*/
+	margin:0;
+	font-size:60px;
+	color:#000;
+	text-shadow:none;
+}
+h3{
+	color:#000;
+	margin-top:-30px;
+	margin-left:55px;
+	padding:0;
+	font-size:35px;
+	text-align:center;
+}
+span{
+	color:#ff114d;
+}
+ol{
+	width:960px;
+	padding:20px;
+	margin:0 auto;
+	color:#000;
+	text-shadow:none;
+}
+ol li{
+	font-size:60px;
+	width:300px;
+	margin:0 3px;
+	float:left;
+	list-style:none;
+	text-align:center;
+}
+
+ol li p{
+	font-size:28px;
+	margin-top:-10px;
+	font-weight:normal;
+	text-shadow:none;
+}
