@@ -9,22 +9,22 @@ if(isset($_REQUEST['sys_argument'])) {
        
 	
 	if ($sys_argument == "99percent"){
-		$tumblrName == "wearethe99percent"
+		$tumblrName == "wearethe99percent";
 		
 		}
 		
 	]if ($sys_argument == "wearethe99percent"){
-		$tumblrName == "wearethe99percent"
+		$tumblrName == "wearethe99percent";
 		
 		}
 		
 	if ($sys_argument == "occupy us" || $sys_argument == "occupyus"){
-		$tumblrName == "occupyus"
+		$tumblrName == "occupyus";
 		
 		}
 		
 	if ($sys_argument == "anonymous"){
-		$tumblrName == "99anon"
+		$tumblrName == "99anon";
 		
 		}
 
