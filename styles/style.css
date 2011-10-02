@@ -52,6 +52,14 @@ h3{
 span{
 	color:#ff114d;
 }
+a{
+	text-decoration:none;
+	color:#000;
+}
+a:hover{
+	color:#ff114d;
+	text-decoration:underline;
+}
 ol{
 	width:960px;
 	padding:20px;
@@ -73,4 +81,11 @@ ol li p{
 	margin-top:-10px;
 	font-weight:normal;
 	text-shadow:none;
+}
+footer{
+	width:960px;
+	position:absolute;
+	bottom:0;
+	margin:0 auto;
+	text-align:right;
 }
