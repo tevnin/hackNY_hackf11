@@ -57,7 +57,7 @@
 	
 	$sessionvar1 = $_REQUEST['sessionvar1'];
 	
-	if(!isset($sessionvar1)){
+	if(!$sessionvar1){
 		echo "
 		<message>
 			<content>" . $text . " -Text 1 4more</content>
