@@ -1,13 +1,16 @@
 <?php
 
+	$sys_argument = $_REQUEST['sys_argument'];
+
 	$twitter = new Twitter();
-	$testForLatestTweet = $twitter->findTweets('#occupywallstreet');
+	$testForLatestTweet = $twitter->findTweets($sys_argument);
+	);
 	$text = $testForLatestTweet[0]->text;
 	$text = strip_tags(trim($text));
 	// for($i=0; i<textExploded.length; i++){
 	// 	text .= textExploded[i];
 	// }
-	echo($text);
+//	echo($text);
 //	echo("<script>console.log('" . var_dump($testForLatestTweet) . "')</script>");
 
 
@@ -44,8 +47,7 @@
 	    }
 	}
 	
-	$sys_argument = $_REQUEST['sys_argument'];
-	 echo "<message><content>You texted in '$sys_argument'!</content></message>";
+	 echo "<message><content>" . $text . "</content></message>";
 
 	
 ?>
