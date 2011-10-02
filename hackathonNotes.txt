@@ -1,0 +1,233 @@
+MongoDB--Database
+Database/JavaScript Shell
+
+www.mongodb.org/display/DOCS/Home
+cookbook.mongodb.org
+
+
+bitly API
+Jehiah Czebotar
+@jehiah
+
+	Metrics
+	QRCodes
+	Bitly Bundles—store a set of info in list of links
+	API to manage bit.ly bundles
+	
+	api.bitly.com
+	bitly.com/pages/hackny
+	
+DotGo
+	Stephen
+	Textmessaging
+		Operates 5 short codes
+			DOTCOM
+			DOTNET
+			DOTEDU
+			DOTGOV
+			DOTORG
+		CMRL—text.cmrl
+		XML-based
+		Uses "match" tags
+			specifies a word that you expect people to text, and text that you want them to get in response!!!
+		match can nest inside one another
+			will allow fuzzy matching
+			
+		* for everything else "nothing like that"
+		Reply interaction!?!?!
+		Engine--write script--pass message on to your script, and script returns message
+		
+		
+		Stefan and Jake
+		s.gromo
+		
+		
+Boxee
+	Put internet media content on boxee
+	Can run webkit app?
+	Simple interacitons, bold designs, get to content, full screen
+	
+	html5-examples
+	html5-fullscreen-player
+		optimized video controls
+		
+		ray@boxee.tv
+		@boxee_api
+		github.com/Boxee
+		developer.boxee.tv
+		
+Chartbeat
+	"real-time analytics that thinks like you do"
+	Every 3 seconds, hit API
+	Measured presence on page, not just whether they hit the page
+	Targeted toward website owners
+	chartbeat.com/labs/
+	
+ordr.in
+	Add food ordering to apps
+		Submit orders on behalf of users
+		Delivery check API
+		Fee API
+		Restaurant details API
+		Send order to them, and they handle payment
+		
+		Libraries in Javascript, python, php and ruby
+		
+	@ordrinAPI
+	groups.goog.e.com/group/ordrin-api
+
+
+Foursquare
+	APIv2
+	millions of tips at millions of venues
+	Can do everything w/API that is available for users
+	developer.foursquare.com
+	anoot@foursquare.com
+	live stuff
+		push API for users
+		venue push real time API
+
+Parse.ly
+	Zach?
+	Andrew
+	insights to online publishers
+		tracks 1/4 of US population
+		topics, posts, 
+		extended referral tracking—Facebook/twitter, etc.
+		
+	HackNY—challenge page
+		Descriptions, example document
+		
+	Ask Andrew about Python
+	
+Etsy
+	Justin
+	www.etsy.com/developers
+	Register—create an app-call the app HackNY—get immediate access
+	API key, oauth, etc
+	Can search by location, color, keyword, pric e
+	openapi.com/....... lots of ways to sort
+	treasury
+	create and edit listings
+	access sales data with Oauth
+	Access purchase data
+	www.oauth.net/code for oauth
+	Register as seller if you want to do s
+	Sandbox api
+	DM@etsyapi
+	justin@etsy.com
+	
+	updates in real time
+	
+	Myabe a data visualization thing?
+	pubsubhubbub
+	
+NYC Information & Telecom
+	NYC DataMine
+	Doewnload data
+	NYC Platform
+	http://on.nyc.gov/platform?
+	
+	311 complaints—not in API, yet
+	
+	demo projects on github
+	subscribe to dataset
+	Customize datasets--create account on NYC Platform, can save datasets, available to public
+	www.hycbigapps.com
+		Challenge coming soon!
+		Use datasets!
+		
+		on.nyc.gov/nycplatform
+		/311inquiry
+		www.nycbigapps.com
+		bit.ly/nycplatform-100111
+		appsforcommunities.challenge.gov
+		
+		
+Tumblr
+	API V2
+	tumblr.
+	derekg.org/hack
+	pubsubhubbub
+	hacknyblog.tumblr.com
+		send photos and they'll post it
+
+NYTimes
+	Brad Stangler
+	Archive back to 1981
+	Will increase scrobbling!!!
+	Newswire—'firehose' app
+	
+hyperpublic
+	Doug Canich?
+	Places+
+		database
+		rich data? photos, tags, pricing, ctegories, transportation
+	Geo Deals and Events
+		Groupon, Living Social, Eventbrite
+		pass a latlon
+		Can make money--pay you based on clicks
+	Examples
+		Checkin Deals
+		WiFi Locator
+	What can you build?
+		Group messageing app with local deals
+		sms based places search
+		luch suggestions
+		gmail plugin that shows place info in e-mail
+		doug@hyperpublic.com
+		http://developer.hyperpublic.com
+		hyperpublic sent someone to drive Carnegie mellon kids
+		
+Aviary
+	developers.aviary.com
+	Web, android, and iphone support
+	github! get sdk code
+		let users edit photos directly
+		
+Things to help with hacks
+	Ambassadors
+		Josh Knolls—Ruby
+		Jorge—Foursquare
+		Eric 
+			Rub
+		John
+			Javascriptrub
+		Andrew
+			Python, js, mongodb, parse.ly
+		Mark
+			ruby, ios, js
+		Mark, tumblr, ruby, 
+		pete-unix, debugging
+		rob-twiio-ios textmessaging, python, php, js,
+		Kyle-ruby,db,hacking
+		rich--google, python, django, js, php
+		?mongodb, java, pyhton
+		Ryan--rails, js, 
+		will--ios, iponne
+		will?--python, django, js
+	Office Hours
+		Python
+		Ruby
+		JavaScript
+		DataOn?
+		
+Hacker League
+	Running hackathon on their software
+	Centralize hacker community
+	Each hackathon writes its own software
+	Create a software for hackathons/create hacker profiles
+	See hacks you've submitted and prizes won
+	www.hackerleague.org/com
+	@hackerleague
+	
+APIs we're integrating:
+	DotGo
+		Twitter
+		NYTimes
+		Tumblr
+		140it
+		
+DOTCOM: 368266
+DOTORG: 368674
+		
