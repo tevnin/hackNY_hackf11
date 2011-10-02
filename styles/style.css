@@ -17,7 +17,7 @@ article{
 	background-color:rgba(255,255,255,.4);
 	display:block;
 	width:960px;
-	height:300px;
+	height:458px;
 	margin:0 auto;
 	padding:20px 0;
 	text-align:center;
@@ -41,6 +41,7 @@ h2{
 	color:#000;
 	text-shadow:none;
 }
+
 h3{
 	color:#000;
 	margin-top:-30px;
@@ -48,6 +49,14 @@ h3{
 	padding:0;
 	font-size:35px;
 	text-align:center;
+}
+h4{
+	/*display:inline;*/
+	margin:0;
+	font-size:45px;
+	color:#000;
+	text-shadow:none;
+	padding-top:10px;
 }
 span{
 	color:#ff114d;
@@ -88,4 +97,11 @@ footer{
 	bottom:0;
 	margin:0 auto;
 	text-align:right;
+}
+
+p2{
+	font-size:28px;
+	margin-top:-10px;
+	font-weight:normal;
+	text-shadow:none;
 }
