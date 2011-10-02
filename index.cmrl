@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cmrl xmlns:dotgo="http://dotgo.com/cmrl/1.0">
+	<match pattern="twitter">
+		<engine href="twitter/index.php">
+	</match>
+	<match pattern="tumblr">
+		<engine href="tumblr/index.js">
+	</match>
+	<match pattern="nytimes">
+		<engine href="nytimes/index.js">
+	</match>
 	<match pattern="*">
 		<message>
-			<content>Hello world!</content>
+			<content>Instructions:</content>
 		</message>
 	</match>
 </cmrl>
