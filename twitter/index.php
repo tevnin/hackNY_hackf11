@@ -54,22 +54,18 @@
 	    }
 	}
 	
-?>
-	<match pattern="*">
-		<input txt_msg="searchTerm">
+	
+	$sessionvar1 = $_REQUEST['sessionvar1'];
+	
+	if(!isset($sessionvar1)){
+		echo "
 		<message>
-			<content><?php echo $text; ?> -Text 1 4more</content>
-			<?php for($i=0; $i<count($textMixed); $i++): ?>
-				<input txt_msg="1">
-					<message>
-						<content><?php echo $textMixed[$i]; ?> -Txt "1" 4mr</content>
-						
-			<?php endfor;
-			for($i=0; $i<count($textMixed); $i++): ?>
-					</message>
-				</input>
-			<?php endfor; ?>
-		</message>
-		</input>
-	</match>
-				
+			<content>" . $text . " -Text 1 4more</content>
+		</message>";
+	 } else { 		
+		echo "
+		<message>
+			<content>" . $textMixed[0] . " -Text crazyface 4more</content>
+		</message>";
+ 	}
+		?>

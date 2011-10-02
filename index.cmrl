@@ -2,13 +2,13 @@
 <cmrl xmlns:dotgo="http://dotgo.com/cmrl/1.0">
 	
 	<match pattern="twitter">
-		<engine href="hackf11/twitter/index.php" />
+		<engine href="http://tamievnin.com/hackf11/twitter/index.php" />
 	</match>
 	<match pattern="tumblr">
-		<engine href="hackf11/tumblr/tumblr.php" />
+		<engine href="http://tamievnin.com/hackf11/tumblr/tumblr.php" />
 	</match>
 	<match pattern="news">
-		<engine href="hackf11/nytimes/index.php" />
+		<engine href="http://tamievnin.com/hackf11/nytimes/index.php" />
 	</match>
 	<match pattern="">
 	    <message>
