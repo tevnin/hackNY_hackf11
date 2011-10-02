@@ -50,7 +50,24 @@ $pullTumblr = $occupy->parse();
 //	var_dump($text);
 	
 //	echo($text[0]);
-	echo('<message><content>'.$text[0].'</content></message>');
+	
+//	textProcess($text);
+	
+//	function textProcess($text){
+		
+		$random = rand(0, 10);
+		$newMessage = $text[$random];
+
+		while (strlen($newMessage) < 2 ){
+
+			$random = rand(0, 10);
+			$newMessage = $text[$random];
+		}
+		
+//	}
+	
+	
+	echo('<message><content>'.$newMessage.'</content></message>');
 	
 			 
 	class TumblrPost {
