@@ -26,9 +26,7 @@
 
 	}
 	
-		echo('<message><content>' . $testForLatestNYT->results[0]->title . " - " . $testForLatestNYT->results[0]->body . '</content></message>');
-		
-		
+		echo('<message><content>From the NYTimes - ' . $testForLatestNYT->results[0]->title . " - " . $testForLatestNYT->results[0]->body . '</content></message>');		
 	
 	
 ?>

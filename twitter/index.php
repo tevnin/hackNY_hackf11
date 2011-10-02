@@ -1,6 +1,6 @@
 <?php
 
-	if(isset($_REQUEST['sys_argument'])) {	
+	if($_REQUEST['sys_argument']) {	
 		$sys_argument = $_REQUEST['sys_argument'];
 	} else {
 		$sys_argument = "#occupywallstreet";
@@ -55,17 +55,16 @@
 	}
 	
 	
-	$sessionvar1 = $_REQUEST['sessionvar1'];
-	
-	if(!$sessionvar1){
-		echo "
-		<message>
-			<content>" . $text . " -Text 1 4more</content>
+	// $sessionvar1 = $_REQUEST['sessionvar1'];
+	// 
+	// if(!$sessionvar1){
+		echo "<message>
+			<content>" . $text . " -Text <anchor><engine href='http://www.openqry.org/twitter/twitter2.php?q=" . urlencode($sys_argument) . "&n=0' /></anchor> 4more</content>
 		</message>";
-	 } else { 		
-		echo "
-		<message>
-			<content>" . $textMixed[0] . " -Text crazyface 4more</content>
-		</message>";
- 	}
+	// } else { 		
+	  // 		echo "
+	  // 		<message>
+	  // 			<content>" . $textMixed[0] . " -Text crazyface 4more</content>
+	  // 		</message>";
+	  // 	}
 		?>
