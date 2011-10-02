@@ -7,7 +7,8 @@ $occupy = new TumblrPost();
 $pullTumblr = $occupy->parse();
 
 
-//var_dump($pullTumblr);
+	echo('<message><content>'.$pullTumblr->response->blog->description.'</content></message>');
+	//echo('<message><content>'.$pullTumblr->results[0]->title ." - ". $pullTumblr->results[0]->body.'</content></message>');
 
 
 	for ($i=0;$i<10;$i++) {
@@ -47,7 +48,7 @@ $pullTumblr = $occupy->parse();
 		
 	}
 		
-	var_dump($text);
+	//var_dump($text);
 			 
 	class TumblrPost {
 	  function parse() {

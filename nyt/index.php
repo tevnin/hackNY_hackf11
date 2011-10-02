@@ -13,6 +13,7 @@
 
 
 
+
 	class NYTimes {
 	
 	    public function findNYTimes($query) {
@@ -26,6 +27,8 @@
 	}
 	
 		echo('<message><content>'.$testForLatestNYT->results[0]->title ." - ". $testForLatestNYT->results[0]->body.'</content></message>');
+		
+		
 	
 	
 ?>
