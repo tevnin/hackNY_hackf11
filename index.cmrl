@@ -11,7 +11,7 @@
 	</match>
 	<match pattern="*">
 		<message>
-			<content>Instructions:</content>
+			<content>Instructions: for </content>
 		</message>
 	</match>
 </cmrl>
