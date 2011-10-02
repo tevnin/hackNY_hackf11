@@ -12,7 +12,7 @@
 	</match>
 	<match pattern="">
 		<message>
-	      <content>reply <anchor><engine href="http://www.openqry.org/nyt/index.php" /></anchor> + topic for news, <anchor><engine href="http://www.openqry.org/twitter/index.php" /></anchor> + topic for twitter, or <anchor><engine href="http://www.openqry.org/tumblr/tumblr.php" /></anchor>  + topic for tumblr to continue!</content>
+	      <content>reply <anchor query="h response"><engine href="http://www.openqry.org/nyt/index.php" /></anchor> + topic for news, <anchor><engine href="http://www.openqry.org/twitter/index.php" /></anchor> + topic for twitter, or <anchor><engine href="http://www.openqry.org/tumblr/tumblr.php" /></anchor>  + topic for tumblr to continue!</content>
 	    </message>
 	  </match>
 	<match pattern="*">
