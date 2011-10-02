@@ -1,33 +1,5 @@
 <?php
 
-if(isset($_REQUEST['sys_argument'])) {        
-               $sys_argument = $_REQUEST['sys_argument'];
-       } else {
-               $sys_argument = "99percent";
-       }
-       
-       
-	
-	if ($sys_argument == "99percent"){
-		$tumblrName == "wearethe99percent";
-		
-		}
-		
-	]if ($sys_argument == "wearethe99percent"){
-		$tumblrName == "wearethe99percent";
-		
-		}
-		
-	if ($sys_argument == "occupy us" || $sys_argument == "occupyus"){
-		$tumblrName == "occupyus";
-		
-		}
-		
-	if ($sys_argument == "anonymous"){
-		$tumblrName == "99anon";
-		
-		}
-
 $outputString = array();
 
 $occupy = new TumblrPost();
@@ -75,19 +47,13 @@ $pullTumblr = $occupy->parse();
 	
 		
 	}
-	
-	
-	
-
-	
-	
 		
 	//var_dump($text);
 			 
 	class TumblrPost {
 	  function parse() {
 	
-	    $percentURL =  "http://api.tumblr.com/v2/blog/".$tumblrName.".tumblr.com/posts/text?api_key=eTWiIM8BvyUNOkl7QZUUSei2WgcaMXwOBASDVeUSymGsBBuLfy";
+	    $percentURL =  "http://api.tumblr.com/v2/blog/wearethe99percent.tumblr.com/posts/text?api_key=eTWiIM8BvyUNOkl7QZUUSei2WgcaMXwOBASDVeUSymGsBBuLfy";
 
 		
 	  	// create curl resource 
