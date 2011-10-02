@@ -43,7 +43,7 @@ $pullTumblr = $occupy->parse();
 		
 		//$rest = substr("abcdef", 0, -1);
 		
-		$text[$i] = substr($output->new, 0, 435);
+		$text[$i] = substr($output->new, 0, 465);
 	
 		
 	}
