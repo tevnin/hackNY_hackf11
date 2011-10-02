@@ -1,11 +1,6 @@
-<!-- NYT ftw -->
-<!doctype html>
 <html>
 	<head>
 		<title>NYT</title>
-		<style type="text/css">
- 	body: { font-family: Helvetica;}
-</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		
 		<script>
@@ -13,7 +8,7 @@
 			var text = new Array();
 			var apiKey = "52697f63c9ade478ec6f2c7d71811aa6:17:61363877";
 			var url = 
-			"http://api.nytimes.com/svc/search/v1/article?format=json&query=occupy%2Bwall%2Bstreet&rank=newest&api-key="  + apiKey;
+			"http://api.nytimes.com/svc/search/v1/article?format=json&query=occupy%2Bwall%2Bstreet&rank=newest&api-key="+apiKey;
 			//console.log(url);
 			
 			$.ajax({	
@@ -28,7 +23,6 @@
 				
 			//brad.stenger@nytimes.com
 			success: function(data){
-				document.write('<match pattern=\"twitter\"><message><content>');
 					
 			
 				var content = "";
@@ -44,7 +38,7 @@
 				
 				}
 				
-				document.write(content + '</content></message></match>');
+				document.write('<section id="stuff"><message><content>' + content + '</content></message></section>');
 			}	
 			});
 			

@@ -7,7 +7,7 @@
 		<engine href="hackf11/tumblr/index.js" />
 	</match>
 	<match pattern="nytimes">
-		<engine href="hackf11/nytimes/index.js" />
+		<engine href="hackf11/nytimes/index.php#stuff" />
 	</match>
 	<match pattern="*">
 		<message>
