@@ -1,0 +1,52 @@
+body{
+	background-color:#eff0f2;
+	background:url('../img/inflicted.png');
+	color:#ff114d;
+	font-family:'Rokkitt', Times, serif;
+	text-shadow: 1px 1px #ffaabf, -1px -1px #aa002b;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+}
+header{
+	/*background-color:#f00;*/
+	display:block;
+	width:960px;
+	margin:50px auto;
+}
+article{
+	display:block;
+	width:960px;
+	margin:0 auto;
+}
+h1{
+	margin:0;
+	padding:0;
+	font-size:170px;
+	text-align:center;
+}
+h2{
+	
+}
+h3{
+	margin-top:-40px;
+	padding:0;
+	font-size:35px;
+	text-align:center;
+}
+ol{
+	width:768px;
+	margin:0 auto;
+	color:#fff;
+}
+ol li, ol li h2{
+	font-size:60px;
+}
+ol li h2{
+	display:inline;
+}
+ol li p{
+	font-size:28px;
+	font-weight:normal;
+	display:inline;
+}
