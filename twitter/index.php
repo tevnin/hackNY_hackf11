@@ -58,9 +58,7 @@
 	// $sessionvar1 = $_REQUEST['sessionvar1'];
 	// 
 	// if(!$sessionvar1){
-		echo "<message>
-			<content>" . $text . " -Text <anchor><engine href='http://www.openqry.org/twitter/twitter2.php?q=" . urlencode($sys_argument) . "&n=0' /></anchor> 4more</content>
-		</message>";
+		echo "<message><content>" . $text . ' -Text <anchor><engine href="http://www.openqry.org/twitter/twitter2.php?q=' . urlencode($sys_argument) . "&n=0\" ></engine></anchor> 4more</content></message>";
 	// } else { 		
 	  // 		echo "
 	  // 		<message>

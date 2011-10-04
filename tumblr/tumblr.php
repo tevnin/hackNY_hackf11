@@ -6,8 +6,7 @@ $occupy = new TumblrPost();
 
 $pullTumblr = $occupy->parse();
 
-
-	echo('<message><content>'.$pullTumblr->response->blog->description.'</content></message>');
+	
 	//echo('<message><content>'.$pullTumblr->results[0]->title ." - ". $pullTumblr->results[0]->body.'</content></message>');
 
 
@@ -48,7 +47,28 @@ $pullTumblr = $occupy->parse();
 		
 	}
 		
-	//var_dump($text);
+//	var_dump($text);
+	
+//	echo($text[0]);
+	
+//	textProcess($text);
+	
+//	function textProcess($text){
+		
+		$random = rand(0, 10);
+		$newMessage = $text[$random];
+
+		while (strlen($newMessage) < 2 ){
+
+			$random = rand(0, 10);
+			$newMessage = $text[$random];
+		}
+		
+//	}
+	
+	
+	echo('<message><content>'.$newMessage.'</content></message>');
+	
 			 
 	class TumblrPost {
 	  function parse() {
